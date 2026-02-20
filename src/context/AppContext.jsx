@@ -36,9 +36,6 @@ export const AppContextProvider=(props)=>{
     const clearCart=()=>{
         setCartItems([])
     }
-    // const refreshAuth=()=>{
-    //     setAuthData(localStorage.getItem("token"),localStorage.getItem("role"))
-    // }
     useEffect(()=>{
         async function loadData() {
             let response;

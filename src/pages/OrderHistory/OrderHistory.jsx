@@ -34,11 +34,11 @@ function OrderHistory() {
     return new Date(dateString).toLocaleDateString('en-us',options)
   }
 
-  if(orders.length===0){
-    return <div className="text-center py-4">No orders found</div>
-  }
   if(loading){
     return <div className="text-center py-4">Loading orders...</div>
+  }
+  if(orders.length===0){
+    return <div className="text-center py-4">No orders found</div>
   }
   return (
     <div className="orders-history-container">
@@ -70,7 +70,6 @@ function OrderHistory() {
                   </td>
                   <td>{formatDate(order.createdAt)}</td>
                 </tr>
-
               ))
             }
           </tbody>
