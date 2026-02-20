@@ -1,0 +1,32 @@
+.item-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border:3px solid white;
+}
+.items-list-container{
+        gap:1rem !important;
+}
+@media (max-width:1024px) {
+    .item-name-text{
+        font-size: 15px;
+    }
+    .item-categ-name-text{
+        font-size: 12px;
+    }
+    .items-list-container{
+        gap:8px !important;
+    }
+    .card{
+        padding: 10px;
+    }
+}
+
+@media (max-width:630px) {
+    .item-name-text{
+        font-size: 18px;
+    }
+    .item-categ-name-text{
+        font-size: 12px;
+    }
+}

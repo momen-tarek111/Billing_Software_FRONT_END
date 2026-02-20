@@ -1,0 +1,40 @@
+    .row-field{
+    margin-bottom: 12px;
+}
+
+@media (max-width:1250px) {
+    .row-field{
+    margin-bottom: 8px;
+}
+.label-form{
+    font-size: 12px;
+    width: 40% !important;
+}
+.customerNameField{
+    min-height: 20px !important;
+    line-height: 0 !important;
+    width: 60% !important;
+}
+.row-field-container{
+    justify-content: space-between;
+}
+}
+
+@media (max-width:900px) {
+        .row-field{
+    margin-bottom: 8px;
+}
+.label-form{
+    font-size: 10px;
+    width: 40% !important;
+}
+.customerNameField{
+    min-height: 20px !important;
+    line-height: 0 !important;
+    width: 60% !important;
+}
+.row-field-container{
+    justify-content: space-between;
+    gap: 0px !important;
+}
+}

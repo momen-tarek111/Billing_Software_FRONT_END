@@ -1,0 +1,28 @@
+.item-card:hover{
+    transform: translateY(-5px);
+    transition:transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.item-image{
+    width: 64px;
+    height: 64px;
+    border-radius: 10%;
+    border: 3px solid white;
+}
+.container-buttons{
+    margin-left: 1rem !important;
+}
+@media (max-width:934px) {
+    .item-image-container{
+        margin-right: 5px !important;
+    }
+    .container-buttons{
+        margin-left: 5px !important;
+    }
+}
+@media (max-width:877px) {
+    .info-text{
+        font-size: 15px !important;
+    }
+}

@@ -1,0 +1,24 @@
+.category-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border:3px solid white;
+}
+.category-container-row{
+    gap: 10px;
+}
+/* .card{
+    max-width: 100% !important;
+} */
+@media (max-width:769px) {
+    .categ-name-text{
+        font-size: 15px !important;
+    }
+    .category-container-row{
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .card{
+        padding: 10px !important;
+    }
+}

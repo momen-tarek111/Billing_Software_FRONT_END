@@ -1,0 +1,60 @@
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ccc !important;
+}
+
+.nav-link.active {
+    color: #fff !important;
+}
+
+.form-control {
+    border-radius: 20px 0 0 20px;
+}
+
+.btn-outline-light {
+    border-radius: 0 20px 20px 0;
+}
+
+@media (min-width:1023px) {
+    .nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .navbar-collapse{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width:1025px) {
+    .nav-link{
+        font-weight: 400 !important;
+        font-size: 14px !important;
+    }
+}
+@media (max-width:769px) {
+    .nav-link{
+        font-weight: 500 !important;
+        font-size: 18px !important;
+    }
+    .account-List{
+        width: 25%;
+    }
+}

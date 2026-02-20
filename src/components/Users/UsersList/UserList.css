@@ -1,0 +1,29 @@
+.card{
+    padding: 1rem;
+}
+.user-info{
+    gap: 1rem;
+}
+@media (max-width:630px) {
+    .card{
+        max-width: 100% !important;
+    }
+    .email-text{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:375px) {
+    .email-text{
+        font-size: 10px;
+    }
+    .card{
+        padding: 8px !important;
+    }
+    .name-text{
+        font-size: 15px;
+    }
+    .user-info{
+        gap: 0px !important;
+    }
+}
