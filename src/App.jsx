@@ -20,6 +20,7 @@ const LoginRoute=({element,auth})=>{
   }
 
   const ProtectedRoute=({element,allowedRoles,auth})=>{
+    console.log("gdfgdfg")
     if(!auth.token){
       return < Navigate to="/login" replace/>
     }
@@ -27,6 +28,13 @@ const LoginRoute=({element,auth})=>{
       return <Navigate to="/dashboard" replace />
     }
     return element;
+  }
+  const SafeRoute=({element,auth})=>{
+
+    if(!auth||!auth.token){
+      return < Navigate to="/login" replace/>
+    }
+    return element
   }
 const App = () => {
   const location=useLocation();
@@ -39,8 +47,8 @@ const App = () => {
       {location.pathname!=="/login"&&<Menubar/>}
       <Toaster/>
       <Routes>
-        <Route path='/dashboard' element={<Dashboard/>}/>
-        <Route path='/explore' element={<Explore/>}/>
+        <Route path='/dashboard' element={<SafeRoute element={<Dashboard/>} auth={auth}/>}/>
+        <Route path='/explore' element={<SafeRoute element={<Explore/>} auth={auth}/>}/>
 
         {/* Admin only routes */}
         
@@ -49,8 +57,8 @@ const App = () => {
         <Route path='/users' element={<ProtectedRoute element={<ManageUsers/>} allowedRoles={['ROLE_ADMIN']} auth={auth}/>}/>
         <Route path='/login' element={<LoginRoute element={<Login/>} auth={auth}/>}/>
 
-        <Route path='/orders' element={<OrderHistory/>}/>
-        <Route path='/' element={<Dashboard/>}/>
+        <Route path='/orders' element={<SafeRoute element={<OrderHistory/>} auth={auth}/>}/>
+        <Route path='/' element={<SafeRoute element={<Dashboard/>} auth={auth}/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>

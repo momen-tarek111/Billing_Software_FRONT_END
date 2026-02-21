@@ -38,8 +38,8 @@ function Login() {
         }
     }
   return (
-    <div className="d-flex bg-light align-items-center justify-content-center vh-100 login-background">
-        <div className='card shadow-lg w-100'>
+    <div className="d-flex bg-light align-items-center justify-content-center vh-100 login-background" >
+        <div className='card shadow-lg w-100 'style={{ maxWidth: "480px" }}>
             <div className='card-body'>
                 <div className='text-center header-login'>
                     <h1 className='card-title'>Sign in</h1>

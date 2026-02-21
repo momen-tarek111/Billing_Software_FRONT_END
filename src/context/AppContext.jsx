@@ -46,6 +46,7 @@ export const AppContextProvider=(props)=>{
                 setItemsData(itemsResponse.data);
                 setCategories(response.data);
             } catch (error) {
+                console.log(error)
                 if(error.status===403||error.status===403||error.status===401||error.status===401){
                     console.log(error)
                     localStorage.removeItem("token")
